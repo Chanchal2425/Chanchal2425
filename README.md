@@ -129,7 +129,7 @@ const chanchal = {
 
 | Project | Stack | Impact |
 |:---|:---|:---|
-| 🏥 **NutriCodx Health Platform** | Zoho Creator · Deluge · CRM | `2hrs→10min` · Live B2B/B2C · `100%` error-free |
+| 🏥 **NutriCodx Health Platform** | Zoho Creator · Deluge · CRM | `2hrs → 10min` · Live B2B/B2C · `100%` error-free |
 | 💳 **Razorpay UI Clone** | HTML · CSS · JS · Tailwind | `95%` visual accuracy · `40%` faster dev cycle |
 | 📄 **Resume Analyzer Pro** | React · Node · Express · Multer | `1K+` analyzed · `300%` more callbacks |
 | ⏱️ **Countdown Timer** | Vanilla JavaScript | Real-time · Zero dependencies · Custom ranges |
