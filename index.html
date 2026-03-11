@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitHub Banner – Chanchal Mankar</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Syne:wght@400;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1500px;
+    height: 500px;
+    overflow: hidden;
+    background: #080810;
+  }
+
+  .banner {
+    width: 1500px;
+    height: 500px;
+    position: relative;
+    background: #080810;
+    overflow: hidden;
+  }
+
+  /* Grid */
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Glow orbs */
+  .orb1 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, transparent 70%);
+    top: -200px;
+    left: -100px;
+  }
+  .orb2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    bottom: -200px;
+    right: 100px;
+  }
+  .orb3 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.07) 0%, transparent 70%);
+    top: 80px;
+    right: 400px;
+  }
+
+  /* Top bar */
+  .top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #6366f1, #a78bfa, #38bdf8, transparent);
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(99,102,241,0.4), transparent);
+  }
+
+  /* LEFT — Identity block */
+  .left {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #6366f1;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 58px;
+    color: #f1f5f9;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  .name span { color: #6366f1; }
+
+  .tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #475569;
+    line-height: 1.7;
+    max-width: 340px;
+  }
+
+  .tagline strong {
+    color: #94a3b8;
+    font-weight: 600;
+  }
+
+  /* Vertical divider */
+  .vline {
+    position: absolute;
+    left: 530px;
+    top: 50px;
+    bottom: 50px;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, rgba(99, 102, 241, 0.4), transparent);
+  }
+
+  /* CENTER — Stats */
+  .center {
+    position: absolute;
+    left: 580px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #334155;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1;
+  }
+  .stat-num.indigo { color: #6366f1; }
+  .stat-num.violet { color: #a78bfa; }
+  .stat-num.cyan   { color: #38bdf8; }
+
+  .stat-desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #475569;
+    letter-spacing: 1px;
+    line-height: 1.5;
+  }
+
+  .stat-desc strong {
+    display: block;
+    color: #64748b;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .hdivider {
+    width: 50px;
+    height: 1px;
+    background: rgba(99,102,241,0.25);
+    margin: 6px 0 18px 0;
+  }
+
+  /* RIGHT — Stack */
+  .right {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+  }
+
+  .stack-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #334155;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    text-align: right;
+  }
+
+  .stack-group {
+    margin-bottom: 12px;
+  }
+
+  .stack-group-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 8px;
+    color: #1e293b;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    text-align: right;
+  }
+
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 4px 11px;
+    border-radius: 3px;
+    letter-spacing: 0.3px;
+  }
+
+  .p1 {
+    background: rgba(99,102,241,0.15);
+    color: #a5b4fc;
+    border: 1px solid rgba(99,102,241,0.3);
+  }
+  .p2 {
+    background: rgba(99,102,241,0.08);
+    color: #6366f1;
+    border: 1px solid rgba(99,102,241,0.18);
+  }
+  .p3 {
+    background: rgba(148,163,184,0.05);
+    color: #475569;
+    border: 1px solid rgba(148,163,184,0.1);
+  }
+
+  /* Bottom meta */
+  .meta {
+    position: absolute;
+    bottom: 18px;
+    left: 80px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(99,102,241,0.2);
+    letter-spacing: 2px;
+  }
+
+  .github-link {
+    position: absolute;
+    bottom: 18px;
+    right: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(99,102,241,0.25);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="grid"></div>
+  <div class="orb1"></div>
+  <div class="orb2"></div>
+  <div class="orb3"></div>
+  <div class="top-bar"></div>
+  <div class="bottom-bar"></div>
+  <div class="vline"></div>
+
+  <!-- LEFT -->
+  <div class="left">
+    <div class="eyebrow">Software Developer</div>
+    <div class="name">Chanchal<br><span>Mankar</span></div>
+    <div class="tagline">
+      Building <strong>web apps & automations</strong><br>
+      that ship to real users.<br>
+      RGPV · CSE · 2026 · CGPA 8.4
+    </div>
+  </div>
+
+  <!-- CENTER -->
+  <div class="center">
+    <div class="section-label">// career impact</div>
+
+    <div class="stat-row">
+      <div class="stat-num indigo">92%</div>
+      <div class="stat-desc">
+        <strong>Speed Gain</strong>
+        Report time: 2hrs → 10 mins
+      </div>
+    </div>
+    <div class="hdivider"></div>
+
+    <div class="stat-row">
+      <div class="stat-num violet">70%</div>
+      <div class="stat-desc">
+        <strong>Less Duplicate Data</strong>
+        Zoho CRM integration
+      </div>
+    </div>
+    <div class="hdivider"></div>
+
+    <div class="stat-row">
+      <div class="stat-num cyan">Live</div>
+      <div class="stat-desc">
+        <strong>Production App</strong>
+        B2B/B2C health platform
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="stack-header">// tech stack</div>
+
+    <div class="stack-group">
+      <div class="stack-group-label">Languages</div>
+      <div class="pills">
+        <span class="pill p1">JavaScript</span>
+        <span class="pill p1">Python</span>
+        <span class="pill p1">C++</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-group-label">Frontend</div>
+      <div class="pills">
+        <span class="pill p2">React</span>
+        <span class="pill p2">HTML5</span>
+        <span class="pill p2">CSS3</span>
+        <span class="pill p2">Tailwind</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-group-label">Backend & Tools</div>
+      <div class="pills">
+        <span class="pill p3">Node.js</span>
+        <span class="pill p3">MySQL</span>
+        <span class="pill p3">Git</span>
+        <span class="pill p3">REST API</span>
+      </div>
+    </div>
+
+    <div class="stack-group">
+      <div class="stack-group-label">Automation</div>
+      <div class="pills">
+        <span class="pill p3">Zoho Creator</span>
+        <span class="pill p3">Deluge</span>
+        <span class="pill p3">Zoho CRM</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="meta">github.com/Chanchal2425 · 8 repositories</div>
+  <div class="github-link">chanchalmankar11@gmail.com</div>
+</div>
+</body>
+</html>
