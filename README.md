@@ -136,7 +136,6 @@ const chanchal = {
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Chanchal2425&theme=algolia&no-frame=false&no-bg=false&column=7&margin-w=6" />
 
 <br/><br/>
 
@@ -154,7 +153,6 @@ const chanchal = {
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=3500&pause=800&color=4D9FFF&center=true&vCenter=true&width=700&height=40&lines=Got+a+problem+worth+solving%3F+Let's+talk+→;Workflow+drowning+in+manual+steps%3F+I+fix+those+→;Frontend+needs+polish%3F+That's+my+thing+→;I+ship+production+code.+Reach+out+↓" />
 
 <br/><br/>
 
@@ -172,6 +170,6 @@ const chanchal = {
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a4a8a,50:0f2952,100:0d1117&height=110&section=footer&animation=fadeIn" />
 
-**`Indore, MP  ·  RGPV CSE 2026  ·  Department Topper  ·  Building things that actually ship ⚡`**
+**`Indore, MP  ·  RGPV CSE 2026  ·  Department Topper`**
 
 </div>
