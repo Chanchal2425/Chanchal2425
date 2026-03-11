@@ -4,12 +4,6 @@
 
 </div>
 
-<div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=1000&color=79B8FF&center=true&vCenter=true&width=650&height=45&lines=Building+things+that+actually+ship+🚀;2+hrs+→+10+min+%7C+Live+B2B+Production+App+✅;Frontend+%7C+Automation+%7C+AI+Development+⚡;Open+to+Software+Developer+Roles+%7C+2026+🎓" />
-
-</div>
-
 <br/>
 
 <div align="center">
