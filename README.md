@@ -27,10 +27,10 @@ const chanchal = {
   college  : "RGPV · LNCT Indore · CSE",
   cgpa     : "8.5 / 10.0 🏆",
   location : "Indore, Madhya Pradesh 🇮🇳",
-  status   : "🟢 Open to Opportunities — 2026",
+  status   : "🟢 Open to Opportunities - 2026",
 
   stack    : ["JavaScript", "React", "Python",
-              "Zoho Creator", "MySQL", "Deluge"],
+              "Zoho Creator", "MySQL", "Deluge","Django"],
 
   shipped  : "Live B2B/B2C NutriCodx Health App",
   impact   : "2hr manual workflow → 10 minutes"
